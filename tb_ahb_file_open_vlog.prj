@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../2025.2/Vivado/data/rsb/busdef" \
+"../../../../AHB.srcs/sources_1/new/ahb_arbiter.v" \
+"../../../../AHB.srcs/sources_1/new/ahb_interconnect.v" \
+"../../../../AHB.srcs/sources_1/new/ahb_m2s_mux.v" \
+"../../../../AHB.srcs/sources_1/new/ahb_sram_slave.v" \
+"../../../../AHB.srcs/sources_1/new/ahb_system_top.v" \
+
+sv xil_defaultlib  --include "../../../../../../../../2025.2/Vivado/data/rsb/busdef" \
+"../../../../AHB.srcs/sim_1/new/tb_ahb_file_open.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
